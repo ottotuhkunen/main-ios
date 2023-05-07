@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C7EEF4E2A07C5B40009974C /* ListOfPassengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EEF4D2A07C5B40009974C /* ListOfPassengers.swift */; };
+		8C7EEF502A07C6040009974C /* SearchPassenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EEF4F2A07C6040009974C /* SearchPassenger.swift */; };
+		8C7EEF522A07C6560009974C /* AddPassenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EEF512A07C6560009974C /* AddPassenger.swift */; };
+		8C7EEF542A07C6B20009974C /* ListOfFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EEF532A07C6B20009974C /* ListOfFlights.swift */; };
+		8C7EEF562A07C6E40009974C /* EditPassenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EEF552A07C6E40009974C /* EditPassenger.swift */; };
 		8CC56BFD2A03E863009D04B0 /* NativeProject_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC56BFC2A03E863009D04B0 /* NativeProject_iOSApp.swift */; };
 		8CC56BFF2A03E863009D04B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC56BFE2A03E863009D04B0 /* ContentView.swift */; };
 		8CC56C012A03E864009D04B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC56C002A03E864009D04B0 /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C7EEF4D2A07C5B40009974C /* ListOfPassengers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPassengers.swift; sourceTree = "<group>"; };
+		8C7EEF4F2A07C6040009974C /* SearchPassenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPassenger.swift; sourceTree = "<group>"; };
+		8C7EEF512A07C6560009974C /* AddPassenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassenger.swift; sourceTree = "<group>"; };
+		8C7EEF532A07C6B20009974C /* ListOfFlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFlights.swift; sourceTree = "<group>"; };
+		8C7EEF552A07C6E40009974C /* EditPassenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPassenger.swift; sourceTree = "<group>"; };
 		8CC56BF92A03E863009D04B0 /* NativeProject-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NativeProject-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC56BFC2A03E863009D04B0 /* NativeProject_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeProject_iOSApp.swift; sourceTree = "<group>"; };
 		8CC56BFE2A03E863009D04B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C7EEF4C2A07C5950009974C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C7EEF4D2A07C5B40009974C /* ListOfPassengers.swift */,
+				8C7EEF4F2A07C6040009974C /* SearchPassenger.swift */,
+				8C7EEF512A07C6560009974C /* AddPassenger.swift */,
+				8C7EEF532A07C6B20009974C /* ListOfFlights.swift */,
+				8C7EEF552A07C6E40009974C /* EditPassenger.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C7EEF572A07C7EC0009974C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CC56C112A03FF47009D04B0 /* PassengerModel.swift */,
+				8CC56C0A2A03F3B1009D04B0 /* FlightModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C7EEF582A07C82F0009974C /* Fetch */ = {
+			isa = PBXGroup;
+			children = (
+				8CC56C132A03FF63009D04B0 /* FetchPassengers.swift */,
+			);
+			path = Fetch;
+			sourceTree = "<group>";
+		};
 		8CC56BF02A03E863009D04B0 = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +98,10 @@
 		8CC56BFB2A03E863009D04B0 /* NativeProject-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8C7EEF582A07C82F0009974C /* Fetch */,
+				8C7EEF572A07C7EC0009974C /* Models */,
+				8C7EEF4C2A07C5950009974C /* Views */,
 				8CC56BFC2A03E863009D04B0 /* NativeProject_iOSApp.swift */,
-				8CC56C0A2A03F3B1009D04B0 /* FlightModel.swift */,
-				8CC56C112A03FF47009D04B0 /* PassengerModel.swift */,
-				8CC56C132A03FF63009D04B0 /* FetchPassengers.swift */,
 				8CC56BFE2A03E863009D04B0 /* ContentView.swift */,
 				8CC56C002A03E864009D04B0 /* Assets.xcassets */,
 				8CC56C022A03E864009D04B0 /* Preview Content */,
@@ -155,9 +194,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC56C122A03FF47009D04B0 /* PassengerModel.swift in Sources */,
+				8C7EEF502A07C6040009974C /* SearchPassenger.swift in Sources */,
+				8C7EEF4E2A07C5B40009974C /* ListOfPassengers.swift in Sources */,
+				8C7EEF542A07C6B20009974C /* ListOfFlights.swift in Sources */,
 				8CC56C0B2A03F3B1009D04B0 /* FlightModel.swift in Sources */,
 				8CC56BFF2A03E863009D04B0 /* ContentView.swift in Sources */,
 				8CC56C142A03FF63009D04B0 /* FetchPassengers.swift in Sources */,
+				8C7EEF522A07C6560009974C /* AddPassenger.swift in Sources */,
+				8C7EEF562A07C6E40009974C /* EditPassenger.swift in Sources */,
 				8CC56BFD2A03E863009D04B0 /* NativeProject_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
