@@ -11,6 +11,8 @@ import Alamofire
 // using Alamofire to fetch passengers from dummyJSON:
 class PassengerAPI: ObservableObject {
     private let baseURL = "https://dummyjson.com/users"
+    
+    // all requests to backend:
 
     // get a list of all passengers:
     func fetchPassengers(completion: @escaping ([Passenger]) -> Void) {

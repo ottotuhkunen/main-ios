@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Models
+
 struct Flight: Identifiable {
     let id = UUID()
     let flightNumber: String
@@ -17,6 +19,8 @@ struct Flight: Identifiable {
 }
 
 // list of fake flights (no connection to backend):
+// added to display how the app would look like in real operation
+
 let flights: [Flight] = [
     Flight(flightNumber: "AY 1545", airline:"Finnair", gateNumber: "25", destination: "BRU / EBBR", bookedPassengers: 30),
     Flight(flightNumber: "AF 1071", airline:"Air France", gateNumber: "22", destination: "CDG / LFPG", bookedPassengers: 0),

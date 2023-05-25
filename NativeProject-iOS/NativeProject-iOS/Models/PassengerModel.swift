@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Models
+
 struct Passenger: Identifiable, Decodable {
     let id: Int
     let firstName: String
@@ -15,6 +17,8 @@ struct Passenger: Identifiable, Decodable {
     let email: String
     let phone: String
 }
+
+// Response models
 
 struct PassengerResponse: Decodable {
     let users: [Passenger]
