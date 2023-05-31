@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-// add a passenger:
+/// View to add a passenger (fourth tabView)
+/// - User can add all necessary data
+/// - Parameter birthDate (using iOS own date selector)
 struct AddPAXView: View {
     private let passengerAPI = PassengerAPI()
     @Binding var selectedFlight: UUID?
@@ -20,7 +22,7 @@ struct AddPAXView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isLoading = false
     
-    // add button visible only when name is filled
+    /// - add button visible only when name is filled
     private var addButtonDisabled: Bool {
         firstName.isEmpty || lastName.isEmpty
     }

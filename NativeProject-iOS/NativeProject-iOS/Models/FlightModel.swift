@@ -7,8 +7,14 @@
 
 import Foundation
 
-// Models
-
+/// Flight model
+/// - Model for dummy flights including
+/// - Parameter id (user id)
+/// - Parameter flightNumber (String) IATA code followed by number
+/// - Parameter airline (String) Airline name
+/// - Parameter gateNumber (String)
+/// - Parameter destination (String) IATA / ICAO
+/// - Parameter bookedPassengers (Int) number of PAX
 struct Flight: Identifiable {
     let id = UUID()
     let flightNumber: String
@@ -18,9 +24,9 @@ struct Flight: Identifiable {
     let bookedPassengers: Int
 }
 
-// list of fake flights (no connection to backend):
-// added to display how the app would look like in real operation
-
+/// Llist of fake flights (no connection to backend):
+/// - added just to display how the app would look like in real operation
+/// - Returns: Three different flights
 let flights: [Flight] = [
     Flight(flightNumber: "AY 1545", airline:"Finnair", gateNumber: "25", destination: "BRU / EBBR", bookedPassengers: 30),
     Flight(flightNumber: "AF 1071", airline:"Air France", gateNumber: "22", destination: "CDG / LFPG", bookedPassengers: 0),

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-// edit passenger details:
+/// View - Edit passenger details
+/// - user can edit passenger name, birth date, email and phone number
+/// - Parameter showAlert: used to alert user of edited passenger (alert contains passenger modified name)
 struct EditPAXView: View {
     var passenger: Passenger
     @ObservedObject var passengerAPI = PassengerAPI()
@@ -30,16 +32,20 @@ struct EditPAXView: View {
 
     var body: some View {
         Form {
+            /// - Header, passenger information
             Section(header: Text("Passenger information")) {
                 TextField("First name", text: $firstName)
                 TextField("Last name", text: $lastName)
                 TextField("Birth date", text: $birthDate)
             }
+            /// - contact information
             Section(header: Text("Contact information")) {
                 TextField("Email", text: $email)
                 TextField("Phone number", text: $phoneNumber)
             }
             Section {
+                /// Update button
+                /// - This updates the user (calls backend service)
                 Button("Update") {
                     passengerAPI.updatePassenger(id: passenger.id, newFirstName: firstName, newLastName: lastName, newBirthDate: birthDate, newEmail: email, newPhoneNumber: phoneNumber) { updatedPassenger in
                         if let _ = updatedPassenger {

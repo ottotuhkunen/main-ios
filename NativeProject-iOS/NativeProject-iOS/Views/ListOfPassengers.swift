@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-// Page with a list of all passengers:
+/// Second tabView of the app with a list of all passengers
+/// - One passenger contains  name, birth date, email and phone number
+/// - Passengers are only shown if a flight is loaded
 struct PAXListView: View {
     @State private var passengers: [Passenger] = []
     private let passengerAPI = PassengerAPI()

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/// Containing list of flights (first tabView of the app)
+/// - all data from flights model
+/// - RadioButton to select a flight (otherwise data will not be loaded from backend)
 struct FlightsView: View {
     @Binding var selectedFlight: UUID?
     
@@ -34,8 +37,9 @@ struct FlightsView: View {
     }
 }
 
-// radio button for flights list:
-// button is disabled if PAX amount is 0
+/// radio button used for flights list:
+/// - because Apple does not have own radio button, here is a custom one
+/// - button is disabled if PAX amount is 0
 struct RadioButton: View {
     @Binding var selectedId: UUID?
     let id: UUID

@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-// page to search, edit or delete passengers:
+/// third tabView of the app to search, edit or delete passengers
+/// - Search button to initiate query
+/// - contains HStack with passenger details
+/// - each passenger have 2 buttons, Edit and Delete
+/// - a flight needs to be loaded on first tabView for this to work
 struct SearchView: View {
     @State private var searchQuery: String = ""
     @State private var searchResults: [Passenger] = []
@@ -19,7 +23,7 @@ struct SearchView: View {
         VStack {
             if let _ = selectedFlight {
                 HStack {
-                    // search for a passenger:
+                    /// - search for a passenger:
                     TextField("Passenger name...", text: $searchQuery)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.leading)
@@ -38,7 +42,7 @@ struct SearchView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                 }
-                // search results (different view:
+                /// - search results (different view:
                 SearchResultsView(passengers: searchResults, passengerAPI: passengerAPI)
 
             } else {

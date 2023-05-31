@@ -11,7 +11,9 @@ struct ContentView: View {
     @State private var selectedFlight: UUID?
     
     var body: some View {
-        // tab view with all pages
+        /// This is a TabView containing all four pages of the app
+        /// - The symbols are taken from SF Symbols (Apple)
+        /// - Different Views are imported from Views folder
         TabView {
             NavigationView {
                 FlightsView(selectedFlight: $selectedFlight)
